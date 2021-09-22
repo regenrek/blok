@@ -8,7 +8,7 @@ export default async function blokModule({
 } = {}) {
   const logger = consola.withScope("@nujek/blok");
 
-  await this.requireModule("@nujek/dynamic", { withConsole, debug });
+  await this.requireModule(["@nujek/dynamic", { withConsole, debug }]);
 
   this.nuxt.hook("components:dirs", (dirs) => {
     dirs.push({
