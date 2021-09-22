@@ -4,10 +4,11 @@ import consola from "consola";
 export default async function blokModule({
   prefix = "",
   withConsole = false,
+  debug = false
 } = {}) {
   const logger = consola.withScope("@nujek/blok");
 
-  await this.requireModule("@nujek/dynamic", { withConsole });
+  await this.requireModule("@nujek/dynamic", { withConsole, debug });
 
   this.nuxt.hook("components:dirs", (dirs) => {
     dirs.push({
