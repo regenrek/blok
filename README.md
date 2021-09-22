@@ -1,31 +1,42 @@
-# @blokwise/blok
+# @nujek/blok
 
-Read the official [docs](https://blok.blokwise.io)
+
+# ⚠️ Important
+This module is a fork of [@blokwise/dynamic](https://github.com/blokwise/dynamic).
+
+Additional feature(s):
+ ```
+ Loads `@nujek/dynamic` instead of `blokwise/dynamic`
+ ```
 
 ## Installation
 
-Add `@blokwise/blok` dependency to your project:
+Add `@nujek/blok` dependency to your project:
 
 ```bash
-yarn add @blokwise/blok
+yarn add @nujek/blok
 ```
 
 ```bash
-npm install @blokwise/blok
+npm install @nujek/blok
 ```
 
-Then, add `@blokwise/blok` to the `modules` section of `nuxt.config.js`:
+Then, add `@nujek/blok` to the `modules` section of `nuxt.config.js`:
 
 ```js[nuxt.config.js]
 {
   modules: [
     [
-      "@blokwise/blok",
+      "@nujek/blok",
       { prefix: "awesome" }
     ]
   ],
 }
 ```
+
+<details><summary>Docs</summary>
+
+Read the official [docs](https://blok.blokwise.io)
 
 ## Options
 

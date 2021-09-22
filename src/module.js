@@ -5,9 +5,9 @@ export default async function blokModule({
   prefix = "",
   withConsole = false,
 } = {}) {
-  const logger = consola.withScope("@blokwise/blok");
+  const logger = consola.withScope("@nujek/blok");
 
-  await this.requireModule("@blokwise/dynamic", { withConsole });
+  await this.requireModule("@nujek/dynamic", { withConsole });
 
   this.nuxt.hook("components:dirs", (dirs) => {
     dirs.push({
@@ -20,7 +20,7 @@ export default async function blokModule({
   if (withConsole) {
     logger.success({
       message: "blok component ready",
-      additional: `Module @blokwise/blok successfully registered.\nReady to auto import and hydrate components based on storyblok blok schemas\nRead docs: https://blok.blokwise.io`,
+      additional: `Module @nujek/blok successfully registered.\nReady to auto import and hydrate components based on storyblok blok schemas\nRead docs: https://blok.nujek.io`,
       badge: true,
     });
   }
