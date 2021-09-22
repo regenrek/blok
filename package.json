@@ -1,6 +1,6 @@
 {
   "name": "@nujek/blok",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Dynamically load components based on storyblok blok schemas in your nuxt.js project.",
   "repository": "nujek/blok",
   "publishConfig": {
@@ -10,7 +10,8 @@
   "main": "src/module.js",
   "scripts": {
     "test": "jest",
-    "dev": "nuxt dev test/fixture"
+    "dev": "nuxt dev test/fixture",
+    "publish:ci": "bumpp patch --commit --push --tag && pnpm publish"
   },
   "keywords": [
     "nuxtjs",
