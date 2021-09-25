@@ -14,7 +14,6 @@ export default async function blokModule({
   await requireModule(["@nujek/dynamic", { withConsole, debug }]);
 
   nuxt.hook("components:dirs", (dirs) => {
-    console.log("go for it")
     dirs.push({
       path: resolve(runtimeDir, "components"),
       prefix: '',
