@@ -1,4 +1,4 @@
-import { join } from "path";
+import { resolve } from "path";
 import consola from "consola";
 
 export default async function blokModule({
@@ -6,15 +6,19 @@ export default async function blokModule({
   withConsole = false,
   debug = false
 } = {}) {
+  const { nuxt, requireModule } = this
   const logger = consola.withScope("@nujek/blok");
+  const runtimeDir = resolve(__dirname, 'runtime')
+  nuxt.options.build.transpile.push(runtimeDir, '@nujek/blok')
 
-  await this.requireModule("@nujek/dynamic", { withConsole, debug });
+  await requireModule(["@nujek/dynamic", { withConsole, debug }]);
 
-  this.nuxt.hook("components:dirs", (dirs) => {
+  nuxt.hook("components:dirs", (dirs) => {
+    console.log("go for it")
     dirs.push({
-      path: join(__dirname, "components"),
-      pattern: "**/*.vue",
-      prefix,
+      path: resolve(runtimeDir, "components"),
+      prefix: '',
+      pathPrefix: false
     });
   });
 
@@ -25,8 +29,6 @@ export default async function blokModule({
       badge: true,
     });
   }
-
-  return true;
 }
 
 module.exports.meta = require("./../package.json");
