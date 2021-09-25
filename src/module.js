@@ -16,7 +16,7 @@ export default async function blokModule({
   nuxt.hook("components:dirs", (dirs) => {
     dirs.push({
       path: resolve(runtimeDir, "components"),
-      prefix: '',
+      prefix,
       pathPrefix: false
     });
   });
