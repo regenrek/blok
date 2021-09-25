@@ -1,6 +1,6 @@
 {
   "name": "@nujek/blok",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "Dynamically load components based on storyblok blok schemas in your nuxt.js project.",
   "repository": "nujek/blok",
   "publishConfig": {
