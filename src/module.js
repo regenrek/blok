@@ -24,7 +24,7 @@ export default async function blokModule({
   if (withConsole) {
     logger.success({
       message: "blok component ready",
-      additional: `Module @nujek/blok successfully registered.\nReady to auto import and hydrate components based on storyblok blok schemas\nRead docs: https://blok.nujek.io`,
+      additional: `Module @nujek/blok successfully registered.\nReady to auto import and hydrate components based on storyblok blok schemas\nRead docs: https://nujek-docs.vercel.io`,
       badge: true,
     });
   }
